@@ -1,0 +1,4 @@
+type: static #static or simple 
+server: http://localhost:8000
+articles:
+  - gitireadme-testA/test

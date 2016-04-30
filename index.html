@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>GitiReadMe</title>
+    <meta name="description" content="GitiReadMe, a opensource decentralized article sharing service.">
+    <meta name="keywords" content="open-source decentralized github git">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/default.css">
+            
+</head>
+<body >
+    <div class="container">
+        <h1>Articles</h1>
+        <div id="grid" class="row">
+        </div> 
+        <div id="article">
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js-yaml.min.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/default.js"></script>
+    
+    <script type="text/x-mustache" id="item-template">
+        <div class="item">
+            <div class="well">
+                <h2><a href="#" class="title">{{name}}</a></h2>
+                <p><span>author:{{user}}</span></p>
+                <p><span>stars:{{stars}}</span><span>watches:{{watches}}</span></p>
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-mustache" id="article-template">
+        <div class="side-bar">
+            <div class="well">
+                <h2 class="title">{{name}}</h2>
+                <p><span>author:{{user}}</span></p>
+                <p><span>stars:{{stars}}</span><span>watches:{{watches}}</span></p>
+                <p>{{description}}</p>
+            </div>
+            <div class="map">
+            </div>
+        </div>
+        <div class="detail">
+        </div>
+    </script>
+
+</body>
+</html>
