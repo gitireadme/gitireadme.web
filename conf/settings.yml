@@ -1,4 +1,4 @@
 type: simple #static or simple 
-server: http://api.gitireadme.com
+server: http://api.gitiread.me
 articles:
   - gitireadme/guide
