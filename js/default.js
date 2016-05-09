@@ -87,3 +87,18 @@ $(document).ready(function(){
 	})
 
 });
+
+
+
+$("#theme-select").find("a").click(function(){
+	var theme = $(this).data("theme");
+	var cssFile = "css/bootstrap.min.css";
+	if (theme != "default"){
+		cssFile = "css/bootstrap-"+theme+".min.css";
+	}
+	$("#theme-css").attr("href",cssFile);
+	$("#theme-select").find("li").removeClass("active");
+	$(this).parent().addClass("active");
+	$(document).trigger("click");
+	return false;
+})

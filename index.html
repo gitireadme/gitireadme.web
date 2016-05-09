@@ -6,17 +6,66 @@
     <meta name="keywords" content="open-source decentralized github git">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link id="theme-css" rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/default.css">
             
 </head>
 <body >
+    <nav class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">GitiReadMe</a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <!--
+                      <li class="active"><a href="#">Link</a></li>
+                      <li><a href="#"></a></li>
+                      -->
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Theme<span class="caret"></span></a>
+                        <ul id="theme-select" class="dropdown-menu" role="menu">
+                          <li><a href="#" class="active" data-theme="default">Default</a></li>
+                          <li><a href="#" data-theme="slate">Slate</a></li>
+                          <li><a href="#" data-theme="flaty">Flaty</a></li>
+                        </ul>
+                      </li>
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="http://www.gitiread.me">About</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
     <div class="container">
         <h1>Articles</h1>
         <div id="grid" class="row">
         </div> 
         <div id="article">
         </div>
+  
+    
+    
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled">
+                        <li class="pull-right"><a href="#top">Back to top</a></li>
+                        <li><a href="https://github.com/gitireadme">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                    <p>Made by GitiReadme </p>          
+            </div>
+        </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
