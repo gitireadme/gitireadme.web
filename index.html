@@ -20,7 +20,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">GitiReadMe</a>
+                    <a class="navbar-brand" href="#" id="brand">GitiReadMe</a>
                   </div>
 
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -45,10 +45,21 @@
                 </div>
               </nav>
     <div class="container">
-        <h1>Articles</h1>
-        <div id="grid" class="row">
-        </div> 
+        <div id="list">
+            <h1>Articles</h1>
+            <div id="grid" class="row">
+            </div> 
+        </div>
         <div id="article">
+            <h1>Commits</h1>
+            <div class="row">
+                <div id="sider" class="col-md-3">
+                
+                </div>
+                <div id="content" class="col-md-9">
+
+                </div>
+            </div>
         </div>
   
     
@@ -70,6 +81,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/js-yaml.min.js"></script>
+    <script src="js/markdown.min.js"></script>
     <script src="js/mustache.min.js"></script>
     <script src="js/default.js"></script>
     
@@ -77,25 +89,43 @@
         <div class="item">
             <div class="well">
                 <h2><a href="#" class="title">{{name}}</a></h2>
-                <p><span>author:{{user}}</span></p>
-                <p><span>stars:{{stars}}</span><span>watches:{{watches}}</span></p>
                 <p>{{description}}</p>
+                <p>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span>&nbsp;{{user}}</span>
+                    <span class="pull-right">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span >&nbsp;{{stars}}</span>
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><span >&nbsp;{{watches}}</span>
+                    </span>
+                </p>
             </div>
         </div>
     </script>
-
-    <script type="text/x-mustache" id="article-template">
-        <div class="side-bar">
-            <div class="well">
-                <h2 class="title">{{name}}</h2>
-                <p><span>author:{{user}}</span></p>
-                <p><span>stars:{{stars}}</span><span>watches:{{watches}}</span></p>
-                <p>{{description}}</p>
-            </div>
-            <div class="map">
-            </div>
+    <script type="text/x-mustache" id="article-sider-template">
+        <div>
+            <a class="commit" href="#">
+                <span class="glyphicon glyphicon-record" aria-hidden="true"></span><span >&nbsp;{{shortId}}</span>
+            </a>
+            <span class="pull-right">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span>&nbsp;{{username}}</span>
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span><span >&nbsp;{{shortDate}}</span>
+            </span>
+            <hr/>
         </div>
-        <div class="detail">
+    </script>
+    <script type="text/x-mustache" id="article-template">
+        <div>
+            <p>
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span>&nbsp;{{article.user}}</span>
+                <span class="pull-right">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span >&nbsp;{{article.stars}}</span>
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><span >&nbsp;{{article.watches}}</span>
+                </span>
+            </p>
+            <p>{{article.description}}</p>
+            <hr/>
+            <div>
+                {{{commit.content}}}
+            </div>
         </div>
     </script>
 

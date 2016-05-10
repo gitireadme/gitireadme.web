@@ -2,3 +2,4 @@ type: simple #static or simple
 server: http://api.gitiread.me
 articles:
   - gitireadme/guide
+  - gitireadme-testA/test
